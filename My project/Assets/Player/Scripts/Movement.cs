@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
@@ -10,12 +7,15 @@ public class Movement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveVector;
     private bool faceRight = true;
-    public Text scoreText;
-    private int score;
-
+    public TextMeshProUGUI scoreText;
+    public static int score;
+    public static int MaxCount;
+    public int Count;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        MaxCount = Count;
+        scoreText.text = string.Format("{0} / {1}", 0, MaxCount);
     }
 
 
@@ -53,14 +53,14 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "CollectiveSquare")
         {
-            if (Timer.TimeRemaining > 0)
+            if (TimeCounter.TimeRemaining > 0)
             {
                 score++;
                 Destroy(collision.gameObject);
-                if (score != 3)
-                    scoreText.text = "Score: " + score;
-                else
-                    scoreText.text = "All Collected!";
+                if (score != MaxCount + 1)
+                {
+                    scoreText.text = string.Format("{0} / {1}", score, MaxCount);
+                }
             }
         }
     }
