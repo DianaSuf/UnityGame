@@ -1,21 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpawnInhabitant : MonoBehaviour
 {
-    void Start()
-    {
-        
+    public GameObject spawnInhabitant;
+    public GameObject spawnPoint;
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Noise.MaxScaleNoise)
         {
-            Debug.Log("Ўкала заполнена!");
+            Instantiate(spawnInhabitant, spawnPoint.transform.position, Quaternion.identity);
+            Destroy(spawnPoint);
         }
 
     }
