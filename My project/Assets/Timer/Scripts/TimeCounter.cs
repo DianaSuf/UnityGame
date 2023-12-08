@@ -7,7 +7,7 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 
 public class TimeCounter : MonoBehaviour
 {
-    private float MaxTime = 10f;
+    public float MaxTime = 10f;
     public static float TimeRemaining;
     public TextMeshProUGUI time;
     public GameObject GameOver;
