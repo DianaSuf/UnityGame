@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float speed;
+    public float speed = 6f;
     private Rigidbody2D rb;
     private Vector2 moveVector;
     private bool faceRight = true;
@@ -21,6 +21,9 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        if (!Input.GetKey(KeyCode.LeftShift))
+            speed = 6f;
+        else speed = 3f;
         moveVector.x = Input.GetAxisRaw("Horizontal");
         moveVector.y = Input.GetAxisRaw("Vertical");
 
