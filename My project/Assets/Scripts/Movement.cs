@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     public static int score;
     public static int MaxCount;
     public int Count;
+    public static bool trigIce = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,9 +22,11 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (!Input.GetKey(KeyCode.LeftShift))
-            speed = 6f;
-        else speed = 3f;
+        if (Input.GetKey(KeyCode.LeftShift))
+            speed = 3f;
+        else if (trigIce)
+            speed = 2f;
+        else speed = 6f;
         moveVector.x = Input.GetAxisRaw("Horizontal");
         moveVector.y = Input.GetAxisRaw("Vertical");
 
@@ -72,8 +75,15 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ice")
         {
-            speed = 3f;
-            Debug.Log("gd");
+            trigIce = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ice")
+        {
+            trigIce = false;
         }
     }
 }

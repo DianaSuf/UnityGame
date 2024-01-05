@@ -19,10 +19,12 @@ public class Noise : MonoBehaviour
         if (TimeCounter.TimeRemaining > 0 && Progress.MaxCount != Progress.RealCount)
         {
             if (!Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.W) 
-                || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+                || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+                && !Movement.trigIce)
                 GetNoise();
             else if (Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.W)
-                || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+                || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) ||
+                Movement.trigIce)
                 GetSilenceWithCondition();
             else GetSilence();
 
