@@ -20,7 +20,6 @@ public class TimeCounter : MonoBehaviour
     //public Text snowCount;
     //public TextMeshProUGUI snowAll;
     [SerializeField] TextMeshProUGUI scoreText;
-    public bool ice = FinishTrigger.isFinish;
 
     void Start()
     {

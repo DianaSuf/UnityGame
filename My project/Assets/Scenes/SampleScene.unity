@@ -4336,7 +4336,6 @@ MonoBehaviour:
   Stars1: {fileID: 600026973}
   Stars0: {fileID: 1037742990}
   scoreText: {fileID: 1033396938}
-  ice: 0
 --- !u!4 &934306181 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5917202744004113354, guid: 4ae61f4e66e91604b938dcbe423bfd88, type: 3}
