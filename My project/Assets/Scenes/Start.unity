@@ -272,7 +272,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2081297790, guid: 7d8f21ece5dab144db8b35693f9e47a2, type: 3}
+  m_Sprite: {fileID: -2066153784, guid: e894d3ddfea9f73409f74aa7ad645775, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -348,7 +348,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 1258246181, guid: 7d8f21ece5dab144db8b35693f9e47a2, type: 3}
+  m_Sprite: {fileID: -986418295, guid: e894d3ddfea9f73409f74aa7ad645775, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -368,8 +368,8 @@ Transform:
   m_GameObject: {fileID: 964818487}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0093, y: 0.0016, z: 0}
-  m_LocalScale: {x: 2.4494603, y: 2.4652455, z: 1}
+  m_LocalPosition: {x: 0.0093001, y: 0.0016001, z: 0}
+  m_LocalScale: {x: 1.2153977, y: 1.2232302, z: 0.49619}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -497770100, guid: 7d8f21ece5dab144db8b35693f9e47a2, type: 3}
+  m_Sprite: {fileID: -941589303, guid: e894d3ddfea9f73409f74aa7ad645775, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2069529278, guid: 7d8f21ece5dab144db8b35693f9e47a2, type: 3}
+  m_Sprite: {fileID: 605645714, guid: e894d3ddfea9f73409f74aa7ad645775, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -886,7 +886,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 460297189, guid: 7d8f21ece5dab144db8b35693f9e47a2, type: 3}
+  m_Sprite: {fileID: 1322620800, guid: e894d3ddfea9f73409f74aa7ad645775, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
