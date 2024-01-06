@@ -9,6 +9,7 @@ TagManager:
   - Home
   - Light
   - Ice
+  - Enemy
   layers:
   - Default
   - TransparentFX

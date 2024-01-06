@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 222732367}
   - component: {fileID: 222732366}
   - component: {fileID: 222732365}
+  - component: {fileID: 222732369}
   m_Layer: 5
   m_Name: CountAll
   m_TagString: Untagged
@@ -312,6 +313,19 @@ RectTransform:
   m_AnchoredPosition: {x: 7.54, y: 4.04}
   m_SizeDelta: {x: 103.73, y: 99.1}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &222732369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222732363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e964b94e0f7ef7543b065f83d1319bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowAll: {fileID: 222732366}
 --- !u!1 &769859173
 GameObject:
   m_ObjectHideFlags: 0

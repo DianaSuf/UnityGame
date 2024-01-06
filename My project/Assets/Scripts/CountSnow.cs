@@ -6,10 +6,10 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class CountSnow : MonoBehaviour
 {
-    //public TextMeshProUGUI snowAll;
+    public TextMeshProUGUI snowAll;
     void Start()
     {
-        //int snow = PlayerPrefs.GetInt("snow");
-        //snowAll.text = string.Format("{0}", snow);
+        int snow = PlayerPrefs.GetInt("snow");
+        snowAll.text = string.Format("{0}", snow);
     }
 }

@@ -2,22 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinishTrigger : MonoBehaviour
+public class InLight : MonoBehaviour
 {
-    public static bool isFinish = false;
-
+    public static bool isLight = false;
+    public static string lightPrefab;
 
     void Update()
     {
-        //Debug.Log(isFinish);
+        
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            isFinish = true;
-            Debug.Log("jkgh");
+            isLight = true;
+            lightPrefab = collision.name;
         }
     }
 }

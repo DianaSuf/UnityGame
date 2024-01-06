@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 
 public class Movement : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class Movement : MonoBehaviour
     public static int MaxCount;
     public int Count;
     public static bool trigIce = false;
+    public static bool isLight = false;
+    public static bool isFinish = false;
+    public static string lightPrefab;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -70,6 +74,16 @@ public class Movement : MonoBehaviour
                     scoreText.text = string.Format("{0} / {1}", score, MaxCount);
                 }
             }
+        }
+        if (collision.gameObject.tag == "Light")
+        {
+            isLight = true;
+            lightPrefab = collision.name;
+        }
+        if (collision.gameObject.tag == "Finish")
+        {
+            isFinish = true;
+            Debug.Log("jkgh");
         }
     }
 
