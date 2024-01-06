@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
@@ -14,6 +15,9 @@ public class TimeCounter : MonoBehaviour
     public GameObject Stars2;
     public GameObject Stars1;
     public GameObject Stars0;
+    //public static int snow;
+    //public Text snowCount;
+    //public TextMeshProUGUI snowAll;
     [SerializeField] TextMeshProUGUI scoreText;
 
     void Start()
@@ -34,18 +38,71 @@ public class TimeCounter : MonoBehaviour
         else if (TimeRemaining < 0 && Movement.score < 3)
         {
             Stars0.SetActive(true);
+            Time.timeScale = 0f;
+            //snow = PlayerPrefs.GetInt("snow");
+            //PlayerPrefs.SetInt("snow", snow + 0);
+            //snowCount = (snow + 5).ToString();
+            //Debug.Log(snowCount);
+            //snow = snow + 0;
+            //snowAll.text = string.Format("snow");
         }
         else if (TimeRemaining < 0 && 3 <= Movement.score && Movement.score < 6)
         {
             Stars1.SetActive(true);
+            Time.timeScale = 0f;
+            //snow = PlayerPrefs.GetInt("snow");
+            //PlayerPrefs.SetInt("snow", snow + 5);
+            //snowCount = (snow + 5).ToString();
+            //Debug.Log(snowCount);
+            //snow = snow + 5;
+            //snowAll.text = string.Format("snow");
         }
         else if (TimeRemaining < 0 && 6 <= Movement.score && Movement.score < 9)
         {
             Stars2.SetActive(true);
+            Time.timeScale = 0f;
+            //snow = PlayerPrefs.GetInt("snow");
+            //PlayerPrefs.SetInt("snow", snow + 10);
+            //snowCount = (snow + 5).ToString();
+            //Debug.Log(snowCount);
+            //snow = snow + 10;
+            //snowAll.text = string.Format("snow");
         }
         else if (TimeRemaining < 0 && Movement.score == 9)
         {
             Stars3.SetActive(true);
+            Time.timeScale = 0f;
+            //snow = PlayerPrefs.GetInt("snow");
+            //PlayerPrefs.SetInt("snow", snow + 15);
+            //snowCount = (snow + 5).ToString();
+            //Debug.Log(snowCount);
+            //snow = snow + 15;
+            //snowAll.text = string.Format("snow");
         }
+        //getSnow();
     }
+
+    //private void getSnow()
+    //{
+    //    int current = 0;
+    //    if (Movement.score < 3)
+    //    {
+    //        current = 0;
+    //    }
+    //    if (3 <= Movement.score && Movement.score < 6)
+    //    {
+    //        current = 5;
+    //    }
+    //    if (6 <= Movement.score && Movement.score < 9)
+    //    {
+    //        current = 10;
+    //    }
+    //    if (Movement.score == 9)
+    //    {
+    //        current = 15;
+    //    }
+    //    snow = PlayerPrefs.GetInt("snow");
+    //    PlayerPrefs.SetInt("snow", snow + current);
+    //}
+
 }

@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     private Vector2 moveVector;
     private bool faceRight = true;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreAll;
     public static int score;
     public static int MaxCount;
     public int Count;
@@ -62,6 +63,7 @@ public class Movement : MonoBehaviour
             if (TimeCounter.TimeRemaining > 0)
             {
                 score++;
+                scoreAll.text = string.Format("{0} / {1}", score, MaxCount);
                 Destroy(collision.gameObject);
                 if (score != MaxCount + 1)
                 {
