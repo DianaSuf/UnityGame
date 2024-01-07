@@ -8,7 +8,7 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 
 public class TimeCounter : MonoBehaviour
 {
-    public float MaxTime = 10f;
+    public float MaxTime;
     public static float TimeRemaining;
     public TextMeshProUGUI time;
     public GameObject Stars3;
@@ -16,7 +16,7 @@ public class TimeCounter : MonoBehaviour
     public GameObject Stars1;
     public GameObject Stars0;
     public static int snow;
-    public static bool snowslv = true;
+    public static bool snowslv;
     //public Text snowCount;
     //public TextMeshProUGUI snowAll;
     [SerializeField] TextMeshProUGUI scoreText;
@@ -24,10 +24,12 @@ public class TimeCounter : MonoBehaviour
     void Start()
     {
         TimeRemaining = MaxTime;
+        snowslv = true;
     }
 
     void Update()
     {
+        //PlayerPrefs.DeleteAll();
         float minutes, seconds;
         if (TimeRemaining > 0 && Movement.score <= Movement.MaxCount)
         {
@@ -44,10 +46,7 @@ public class TimeCounter : MonoBehaviour
             Time.timeScale = 0f;
             snow = PlayerPrefs.GetInt("snow");
             PlayerPrefs.SetInt("snow", snow + 0);
-            //snowCount = (snow + 5).ToString();
-            Debug.Log(snow);
-            //snow = snow + 0;
-            //snowAll.text = string.Format("snow");
+            snow = PlayerPrefs.GetInt("snow");
             snowslv = false;
         }
         if ((TimeRemaining < 0 && 3 <= Movement.score && Movement.score < 6 && snowslv) 
@@ -57,10 +56,7 @@ public class TimeCounter : MonoBehaviour
             Time.timeScale = 0f;
             snow = PlayerPrefs.GetInt("snow");
             PlayerPrefs.SetInt("snow", snow + 5);
-            //snowCount = (snow + 5).ToString();
-            Debug.Log(snow);
-            //snow = snow + 5;
-            //snowAll.text = string.Format("snow");
+            snow = PlayerPrefs.GetInt("snow");
             snowslv = false;
         }
         if ((TimeRemaining < 0 && 6 <= Movement.score && Movement.score < 9 && snowslv) 
@@ -70,10 +66,7 @@ public class TimeCounter : MonoBehaviour
             Time.timeScale = 0f;
             snow = PlayerPrefs.GetInt("snow");
             PlayerPrefs.SetInt("snow", snow + 10);
-            //snowCount = (snow + 5).ToString();
-            Debug.Log(snow);
-            //snow = snow + 10;
-            //snowAll.text = string.Format("snow");
+            snow = PlayerPrefs.GetInt("snow");      
             snowslv = false;
         }
         if ((TimeRemaining < 0 && Movement.score == 9 && snowslv) || 
@@ -83,10 +76,7 @@ public class TimeCounter : MonoBehaviour
             Time.timeScale = 0f;
             snow = PlayerPrefs.GetInt("snow");
             PlayerPrefs.SetInt("snow", snow + 15);
-            //snowCount = (snow + 5).ToString();
-            Debug.Log(snow);
-            //snow = snow + 15;
-            //snowAll.text = string.Format("snow");
+            snow = PlayerPrefs.GetInt("snow");
             snowslv = false;
         }
         //getSnow();

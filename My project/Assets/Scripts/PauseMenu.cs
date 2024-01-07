@@ -38,6 +38,9 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
         Time.timeScale = 1f;
+        Movement.score = 0;
+        Time.timeScale = 1f;
+        GameIsPause = false;
     }
 
     void Pause()

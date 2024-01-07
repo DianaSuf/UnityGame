@@ -7,7 +7,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class CountSnow : MonoBehaviour
 {
     public TextMeshProUGUI snowAll;
-    void Start()
+    void Update()
     {
         int snow = PlayerPrefs.GetInt("snow");
         snowAll.text = string.Format("{0}", snow);
