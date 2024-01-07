@@ -29,6 +29,7 @@ public class TimeCounter : MonoBehaviour
 
     void Update()
     {
+        //PlayerPrefs.DeleteAll();
         float minutes, seconds;
         if (TimeRemaining > 0 && Movement.score <= Movement.MaxCount)
         {
@@ -45,10 +46,7 @@ public class TimeCounter : MonoBehaviour
             Time.timeScale = 0f;
             snow = PlayerPrefs.GetInt("snow");
             PlayerPrefs.SetInt("snow", snow + 0);
-            //snowCount = (snow + 5).ToString();
-            Debug.Log(snow);
-            //snow = snow + 0;
-            //snowAll.text = string.Format("snow");
+            snow = PlayerPrefs.GetInt("snow");
             snowslv = false;
         }
         if ((TimeRemaining < 0 && 3 <= Movement.score && Movement.score < 6 && snowslv) 
@@ -58,10 +56,7 @@ public class TimeCounter : MonoBehaviour
             Time.timeScale = 0f;
             snow = PlayerPrefs.GetInt("snow");
             PlayerPrefs.SetInt("snow", snow + 5);
-            //snowCount = (snow + 5).ToString();
-            Debug.Log(snow);
-            //snow = snow + 5;
-            //snowAll.text = string.Format("snow");
+            snow = PlayerPrefs.GetInt("snow");
             snowslv = false;
         }
         if ((TimeRemaining < 0 && 6 <= Movement.score && Movement.score < 9 && snowslv) 
@@ -71,10 +66,7 @@ public class TimeCounter : MonoBehaviour
             Time.timeScale = 0f;
             snow = PlayerPrefs.GetInt("snow");
             PlayerPrefs.SetInt("snow", snow + 10);
-            //snowCount = (snow + 5).ToString();
-            Debug.Log(snow);
-            //snow = snow + 10;
-            //snowAll.text = string.Format("snow");
+            snow = PlayerPrefs.GetInt("snow");      
             snowslv = false;
         }
         if ((TimeRemaining < 0 && Movement.score == 9 && snowslv) || 
@@ -84,10 +76,7 @@ public class TimeCounter : MonoBehaviour
             Time.timeScale = 0f;
             snow = PlayerPrefs.GetInt("snow");
             PlayerPrefs.SetInt("snow", snow + 15);
-            //snowCount = (snow + 5).ToString();
-            Debug.Log(snow);
-            //snow = snow + 15;
-            //snowAll.text = string.Format("snow");
+            snow = PlayerPrefs.GetInt("snow");
             snowslv = false;
         }
         //getSnow();

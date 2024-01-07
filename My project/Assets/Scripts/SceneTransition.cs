@@ -10,5 +10,7 @@ public class SceneTransition : MonoBehaviour
     public void Transition()
     {
         SceneManager.LoadScene(sceneNumber);
+        Movement.score = 0;
+        Time.timeScale = 1f;
     }
 }
