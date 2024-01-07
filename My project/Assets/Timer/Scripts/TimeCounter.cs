@@ -8,7 +8,7 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 
 public class TimeCounter : MonoBehaviour
 {
-    public float MaxTime = 10f;
+    public float MaxTime;
     public static float TimeRemaining;
     public TextMeshProUGUI time;
     public GameObject Stars3;
@@ -16,7 +16,7 @@ public class TimeCounter : MonoBehaviour
     public GameObject Stars1;
     public GameObject Stars0;
     public static int snow;
-    public static bool snowslv = true;
+    public static bool snowslv;
     //public Text snowCount;
     //public TextMeshProUGUI snowAll;
     [SerializeField] TextMeshProUGUI scoreText;
@@ -24,6 +24,7 @@ public class TimeCounter : MonoBehaviour
     void Start()
     {
         TimeRemaining = MaxTime;
+        snowslv = true;
     }
 
     void Update()

@@ -9,7 +9,7 @@ public class Progress : MonoBehaviour
 
     void Start()
     {
-        
+        ProgressScale.fillAmount = 0f;
     }
 
     void Update()
