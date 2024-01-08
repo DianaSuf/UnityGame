@@ -17,7 +17,8 @@ public class SpawnInhabitant : MonoBehaviour
         if (Noise.MaxScaleNoise && spawning && (Movement.score <= (Movement.MaxCount / 4)))
         {
             Instantiate(spawnInhabitant, pointOne.transform.position, Quaternion.identity);
-            Destroy(pointOne);
+            //Noise.GetSilence();
+            //Destroy(pointOne);
             spawning = false;
         }
         if ((Noise.MaxScaleNoise && spawning && 
@@ -25,7 +26,8 @@ public class SpawnInhabitant : MonoBehaviour
             || (Movement.isLight && (Movement.lightPrefab == "Light") && spawning))
         {
             Instantiate(spawnInhabitant, pointTwo.transform.position, Quaternion.identity);
-            Destroy(pointTwo);
+            //Noise.GetSilence();
+            //Destroy(pointTwo);
             spawning = false;
         }
         if ((Noise.MaxScaleNoise && spawning && (Movement.score <= 
@@ -33,13 +35,15 @@ public class SpawnInhabitant : MonoBehaviour
             (Movement.isLight && (Movement.lightPrefab == "Light1") && spawning))
         {
             Instantiate(spawnInhabitant, pointTree.transform.position, Quaternion.identity);
-            Destroy(pointTree);
+            //Noise.GetSilence();
+            //Destroy(pointTree);
             spawning = false;
         }
         if (Noise.MaxScaleNoise && spawning && Movement.score <= Movement.MaxCount && Movement.score > ((Movement.MaxCount / 4) * 3))
         {
             Instantiate(spawnInhabitant, pointFour.transform.position, Quaternion.identity);
-            Destroy(pointFour);
+            //Noise.GetSilence();
+            //Destroy(pointFour);
             spawning = false;
         }
     }

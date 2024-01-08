@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     public float speed = 6f;
     private Rigidbody2D rb;
     private Vector2 moveVector;
-    private bool faceRight = true;
+    private bool faceLeft = true;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI scoreAll;
     public static int score;
@@ -17,9 +17,12 @@ public class Movement : MonoBehaviour
     public static bool isLight = false;
     public static bool isFinish = false;
     public static string lightPrefab;
+    public Animator anim;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         MaxCount = Count;
         scoreText.text = string.Format("{0} / {1}", 0, MaxCount);
     }
@@ -33,18 +36,26 @@ public class Movement : MonoBehaviour
             speed = 2f;
         else speed = 6f;
         moveVector.x = Input.GetAxisRaw("Horizontal");
+        anim.SetFloat("Horizontal", Mathf.Abs(moveVector.x));
         moveVector.y = Input.GetAxisRaw("Vertical");
+        anim.SetFloat("Vertical", Mathf.Abs(moveVector.y));
 
-        if (!faceRight && moveVector.x > 0)
-        {
-            Flip();
-            Debug.Log("right");
-        }
-        else if (faceRight && moveVector.x < 0)
-        {
-            Flip();
-            Debug.Log("left");
-        }
+        //if (!faceLeft && moveVector.x < 0)
+        //{
+        //    Flip();
+        //}
+        //else if (faceLeft && moveVector.x > 0)
+        //{
+        //    Flip();
+        //}
+        //else if (Input.GetKey(KeyCode.W))
+        //{
+        //    anim.SetFloat("moveTop", Mathf.Abs(moveVector.y));
+        //}
+        //else if (Input.GetKey(KeyCode.S))
+        //{
+        //    anim.SetFloat("moveDown", Mathf.Abs(moveVector.y));
+        //}
     }
 
     private void FixedUpdate()
@@ -54,7 +65,7 @@ public class Movement : MonoBehaviour
 
     private void Flip()
     {
-        faceRight = !faceRight;
+        faceLeft = !faceLeft;
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
@@ -83,7 +94,7 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "Finish")
         {
             isFinish = true;
-            Debug.Log("jkgh");
+            Debug.Log(isFinish);
         }
     }
 
