@@ -12,7 +12,7 @@ public class Noise : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(Enemy.activeInHierarchy);
+
     }
 
     void Update()
