@@ -17,9 +17,12 @@ public class Movement : MonoBehaviour
     public static bool isLight = false;
     public static bool isFinish = false;
     public static string lightPrefab;
+    public Animator anim;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         MaxCount = Count;
         scoreText.text = string.Format("{0} / {1}", 0, MaxCount);
     }
@@ -33,18 +36,11 @@ public class Movement : MonoBehaviour
             speed = 2f;
         else speed = 6f;
         moveVector.x = Input.GetAxisRaw("Horizontal");
+        anim.SetFloat("Horizontal", moveVector.x);
         moveVector.y = Input.GetAxisRaw("Vertical");
+        anim.SetFloat("Vertical", moveVector.y);
+        anim.SetFloat("Speed", moveVector.sqrMagnitude);
 
-        if (!faceRight && moveVector.x > 0)
-        {
-            Flip();
-            Debug.Log("right");
-        }
-        else if (faceRight && moveVector.x < 0)
-        {
-            Flip();
-            Debug.Log("left");
-        }
     }
 
     private void FixedUpdate()
