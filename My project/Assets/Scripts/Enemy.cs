@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    float speed = 2f;
+    float speed = 1f;
     Transform target;
     void Start()
     {
@@ -16,7 +16,11 @@ public class Enemy : MonoBehaviour
     {
         if (target.position.x > transform.position.x)
         {
-            Debug.Log("sd");
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
         }
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.fixedDeltaTime);
     }
