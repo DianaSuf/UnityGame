@@ -11976,6 +11976,7 @@ MonoBehaviour:
   scoreText: {fileID: 1033396938}
   scoreAll: {fileID: 941952332}
   Count: 9
+  anim: {fileID: 0}
 --- !u!50 &2056154344
 Rigidbody2D:
   serializedVersion: 4
@@ -12517,6 +12518,7 @@ GameObject:
   - component: {fileID: 2105409601}
   - component: {fileID: 2105409600}
   - component: {fileID: 2105409604}
+  - component: {fileID: 2105409605}
   m_Layer: 5
   m_Name: Pause
   m_TagString: Untagged
@@ -12620,6 +12622,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 548236360}
+--- !u!95 &2105409605
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105409599}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 346690abef4a6a84b93cf42a849445c0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &2108978471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5917202744004113354, guid: 4ae61f4e66e91604b938dcbe423bfd88, type: 3}
