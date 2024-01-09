@@ -16,6 +16,7 @@ public class Movement : MonoBehaviour
     public static bool trigIce = false;
     public static bool isLight = false;
     public static bool isFinish = false;
+    public static bool isEnemy = false;
     public static string lightPrefab;
     public Animator anim;
 
@@ -79,7 +80,10 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "Finish")
         {
             isFinish = true;
-            Debug.Log("jkgh");
+        }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            isEnemy = true;
         }
     }
 
