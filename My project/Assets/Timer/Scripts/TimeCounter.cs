@@ -39,7 +39,8 @@ public class TimeCounter : MonoBehaviour
             TimeRemaining -= Time.deltaTime;
         }
         if ((TimeRemaining < 0 && Movement.score < 3 && snowslv) || 
-            (TimeRemaining > 0 && Movement.score < 3 && snowslv && Movement.isFinish))
+            (TimeRemaining > 0 && Movement.score < 3 && snowslv && Movement.isFinish) ||
+            (TimeRemaining > 0 && Movement.score < 3 && snowslv && Movement.isEnemy))
         {
             
             Stars0.SetActive(true);
@@ -50,7 +51,8 @@ public class TimeCounter : MonoBehaviour
             snowslv = false;
         }
         if ((TimeRemaining < 0 && 3 <= Movement.score && Movement.score < 6 && snowslv) 
-            || (TimeRemaining > 0 && 3 <= Movement.score && Movement.score < 6 && snowslv && Movement.isFinish))
+            || (TimeRemaining > 0 && 3 <= Movement.score && Movement.score < 6 && snowslv && Movement.isFinish)
+            || (TimeRemaining > 0 && 3 <= Movement.score && Movement.score < 6 && snowslv && Movement.isEnemy))
         {
             Stars1.SetActive(true);
             Time.timeScale = 0f;
@@ -60,7 +62,8 @@ public class TimeCounter : MonoBehaviour
             snowslv = false;
         }
         if ((TimeRemaining < 0 && 6 <= Movement.score && Movement.score < 9 && snowslv) 
-            || (TimeRemaining > 0 && 6 <= Movement.score && Movement.score < 9 && snowslv && Movement.isFinish))
+            || (TimeRemaining > 0 && 6 <= Movement.score && Movement.score < 9 && snowslv && Movement.isFinish)
+            || (TimeRemaining > 0 && 6 <= Movement.score && Movement.score < 9 && snowslv && Movement.isEnemy))
         {
             Stars2.SetActive(true);
             Time.timeScale = 0f;
@@ -70,7 +73,8 @@ public class TimeCounter : MonoBehaviour
             snowslv = false;
         }
         if ((TimeRemaining < 0 && Movement.score == 9 && snowslv) || 
-            (TimeRemaining > 0 && Movement.score == 9 && snowslv && Movement.isFinish))
+            (TimeRemaining > 0 && Movement.score == 9 && snowslv && Movement.isFinish) ||
+            (TimeRemaining > 0 && Movement.score == 9 && snowslv && Movement.isEnemy))
         {
             Stars3.SetActive(true);
             Time.timeScale = 0f;
