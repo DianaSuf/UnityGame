@@ -42,30 +42,35 @@ public class Movement : MonoBehaviour
             speed = 2f;
         else speed = 6f;
 
-        if (scin == 0)
-        {
-            moveVector.x = Input.GetAxisRaw("Horizontal");
-            anim.SetFloat("Horizontal", moveVector.x);
-            moveVector.y = Input.GetAxisRaw("Vertical");
-            anim.SetFloat("Vertical", moveVector.y);
-            anim.SetFloat("Speed", moveVector.sqrMagnitude);
-        }
-        if (scin == 1)
-        {
-            moveVector.x = Input.GetAxisRaw("Horizontal");
-            anim.SetFloat("Horizontal", moveVector.x);
-            moveVector.y = Input.GetAxisRaw("Vertical");
-            anim.SetFloat("Vertical", moveVector.y);
-            anim.SetFloat("Speed", moveVector.sqrMagnitude);
-        }
-        if (scin == 2)
-        {
-          
-        }
-        if (scin == 3)
-        {
+        moveVector.x = Input.GetAxisRaw("Horizontal");
+        anim.SetFloat("Horizontal", moveVector.x);
+        moveVector.y = Input.GetAxisRaw("Vertical");
+        anim.SetFloat("Vertical", moveVector.y);
+        anim.SetFloat("Speed", moveVector.sqrMagnitude);
+        //if (scin == 0)
+        //{
+        //    moveVector.x = Input.GetAxisRaw("Horizontal");
+        //    anim.SetFloat("Horizontal", moveVector.x);
+        //    moveVector.y = Input.GetAxisRaw("Vertical");
+        //    anim.SetFloat("Vertical", moveVector.y);
+        //    anim.SetFloat("Speed", moveVector.sqrMagnitude);
+        //}
+        //if (scin == 1)
+        //{
+        //    moveVector.x = Input.GetAxisRaw("Horizontal");
+        //    anim.SetFloat("Horizontal", moveVector.x);
+        //    moveVector.y = Input.GetAxisRaw("Vertical");
+        //    anim.SetFloat("Vertical", moveVector.y);
+        //    anim.SetFloat("Speed", moveVector.sqrMagnitude);
+        //}
+        //if (scin == 2)
+        //{
 
-        }
+        //}
+        //if (scin == 3)
+        //{
+
+        //}
 
     }
 
@@ -104,7 +109,7 @@ public class Movement : MonoBehaviour
         }
         else
         {
-            isLight = false;    
+            isLight = false;
         }
         if (collision.gameObject.tag == "Finish")
         {
@@ -129,6 +134,10 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "Ice")
         {
             trigIce = false;
+        }
+        if (collision.gameObject.tag == "Light")
+        {
+            isLight = false;
         }
     }
 }

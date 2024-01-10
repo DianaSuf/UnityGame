@@ -48,14 +48,11 @@ public class SpawnInhabitant : MonoBehaviour
                 //Destroy(pointFour);
                 //spawning = false;
             }
-        } 
+        }
         //else
         //{
-        //    Destroy(pointOne);
-        //    Destroy(pointTwo);
-        //    Destroy(pointTree);
-        //    Destroy(pointFour);
-        //    spawning = false;
+        //    spawnLight = true;
+        //    Debug.Log(spawnLight);
         //}
     }
 }

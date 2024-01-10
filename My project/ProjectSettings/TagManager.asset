@@ -10,6 +10,9 @@ TagManager:
   - Light
   - Ice
   - Enemy
+  - Sound
+  - Slider
+  - Toggle
   layers:
   - Default
   - TransparentFX
