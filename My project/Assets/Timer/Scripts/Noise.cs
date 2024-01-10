@@ -33,6 +33,7 @@ public class Noise : MonoBehaviour
             if (NoiseScale.fillAmount == 1f)
             {
                 MaxScaleNoise = true;
+                NoiseScale.fillAmount = 0f;
             }
             else
             {

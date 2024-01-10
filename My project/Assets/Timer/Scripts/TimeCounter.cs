@@ -17,14 +17,15 @@ public class TimeCounter : MonoBehaviour
     public GameObject Stars0;
     public static int snow;
     public static bool snowslv;
-    //public Text snowCount;
-    //public TextMeshProUGUI snowAll;
+    public static bool menuStars = false;
+    private int stars;
     [SerializeField] TextMeshProUGUI scoreText;
 
     void Start()
     {
         TimeRemaining = MaxTime;
         snowslv = true;
+        stars = PlayerPrefs.GetInt("level1");
     }
 
     void Update()
@@ -49,6 +50,8 @@ public class TimeCounter : MonoBehaviour
             PlayerPrefs.SetInt("snow", snow + 0);
             snow = PlayerPrefs.GetInt("snow");
             snowslv = false;
+            menuStars = true;
+            if (stars <= 0) PlayerPrefs.SetInt("level1", 0);
         }
         if ((TimeRemaining < 0 && 3 <= Movement.score && Movement.score < 6 && snowslv) 
             || (TimeRemaining > 0 && 3 <= Movement.score && Movement.score < 6 && snowslv && Movement.isFinish)
@@ -60,6 +63,8 @@ public class TimeCounter : MonoBehaviour
             PlayerPrefs.SetInt("snow", snow + 5);
             snow = PlayerPrefs.GetInt("snow");
             snowslv = false;
+            menuStars = true;
+            if (stars <= 1) PlayerPrefs.SetInt("level1", 1);
         }
         if ((TimeRemaining < 0 && 6 <= Movement.score && Movement.score < 9 && snowslv) 
             || (TimeRemaining > 0 && 6 <= Movement.score && Movement.score < 9 && snowslv && Movement.isFinish)
@@ -71,6 +76,8 @@ public class TimeCounter : MonoBehaviour
             PlayerPrefs.SetInt("snow", snow + 10);
             snow = PlayerPrefs.GetInt("snow");      
             snowslv = false;
+            menuStars = true;
+            if (stars <= 2) PlayerPrefs.SetInt("level1", 2);
         }
         if ((TimeRemaining < 0 && Movement.score == 9 && snowslv) || 
             (TimeRemaining > 0 && Movement.score == 9 && snowslv && Movement.isFinish) ||
@@ -82,6 +89,8 @@ public class TimeCounter : MonoBehaviour
             PlayerPrefs.SetInt("snow", snow + 15);
             snow = PlayerPrefs.GetInt("snow");
             snowslv = false;
+            menuStars = true;
+            if (stars <= 3) PlayerPrefs.SetInt("level1", 3);
         }
         //getSnow();
     }
