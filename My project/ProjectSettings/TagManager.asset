@@ -10,6 +10,7 @@ TagManager:
   - Light
   - Ice
   - Enemy
+  - Sound
   layers:
   - Default
   - TransparentFX
