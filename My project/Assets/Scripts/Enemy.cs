@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (target.position.x > transform.position.x)
@@ -31,9 +30,9 @@ public class Enemy : MonoBehaviour
         {
             speed = 1f;
         }
-        //if (Bullet.isDead)
-        //{
-        //    Destroy(transform);
-        //}
+        if (Bullet.isDead)
+        {
+            Destroy(gameObject);
+        }
     }
 }

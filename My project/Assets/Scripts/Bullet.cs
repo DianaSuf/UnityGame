@@ -12,13 +12,11 @@ public class Bullet : MonoBehaviour
 
     private Vector2 target;
 
-    // Start is called before the first frame update
     void Start()
     {
         target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);

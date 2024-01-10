@@ -10,7 +10,6 @@ public class Shoot : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
 
-    // Update is called once per frame
     void Update()
     {
         if (timeBtwShots <= 0)
