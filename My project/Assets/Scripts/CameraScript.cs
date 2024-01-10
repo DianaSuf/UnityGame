@@ -5,9 +5,21 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     private Transform player;
+    public int scin;
+    public GameObject pers1;
+    public GameObject pers2;
 
     void Start()
     {
+        scin = PlayerPrefs.GetInt("scin");
+        if (scin == 0)
+        {
+            pers1.SetActive(true);
+        }
+        if (scin == 1)
+        {
+            pers2.SetActive(true);
+        }
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 

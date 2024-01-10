@@ -23,13 +23,14 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+        scin = PlayerPrefs.GetInt("scin");
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         MaxCount = Count;
         scoreText.text = string.Format("{0} / {1}", 0, MaxCount);
         isFinish = false;
         isEnemy = false;
-        scin = PlayerPrefs.GetInt("scin");
+        
     }
 
 
@@ -51,7 +52,11 @@ public class Movement : MonoBehaviour
         }
         if (scin == 1)
         {
-
+            moveVector.x = Input.GetAxisRaw("Horizontal");
+            anim.SetFloat("Horizontal", moveVector.x);
+            moveVector.y = Input.GetAxisRaw("Vertical");
+            anim.SetFloat("Vertical", moveVector.y);
+            anim.SetFloat("Speed", moveVector.sqrMagnitude);
         }
         if (scin == 2)
         {
