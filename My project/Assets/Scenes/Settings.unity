@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.0001
+  m_Value: 0.661
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -226,9 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba5f2e9a18b936498b23143048507cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeParameter: MasterVolume
-  mixer: {fileID: 0}
-  slider: {fileID: 0}
+  volumeParameter: BGVol
+  mixer: {fileID: 24100000, guid: e5a1520e71a743d489cbab32a66f288a, type: 2}
+  slider: {fileID: 65476039}
 --- !u!1 &188570736
 GameObject:
   m_ObjectHideFlags: 0

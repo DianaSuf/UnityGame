@@ -429,6 +429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1069324433}
   - component: {fileID: 1069324434}
+  - component: {fileID: 1069324435}
   m_Layer: 0
   m_Name: Backround
   m_TagString: Untagged
@@ -547,6 +548,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1069324435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069324432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e89780d8b5c704b9abb7307eab44ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeParameter: BGVol
+  mixer: {fileID: 24100000, guid: e5a1520e71a743d489cbab32a66f288a, type: 2}
 --- !u!1 &1442427669
 GameObject:
   m_ObjectHideFlags: 0
