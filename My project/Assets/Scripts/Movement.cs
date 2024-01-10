@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     public static bool isEnemy = false;
     public static string lightPrefab;
     public Animator anim;
+    public int scin;
 
     void Start()
     {
@@ -26,6 +27,9 @@ public class Movement : MonoBehaviour
         anim = GetComponent<Animator>();
         MaxCount = Count;
         scoreText.text = string.Format("{0} / {1}", 0, MaxCount);
+        isFinish = false;
+        isEnemy = false;
+        scin = PlayerPrefs.GetInt("scin");
     }
 
 
@@ -36,11 +40,27 @@ public class Movement : MonoBehaviour
         else if (trigIce)
             speed = 2f;
         else speed = 6f;
-        moveVector.x = Input.GetAxisRaw("Horizontal");
-        anim.SetFloat("Horizontal", moveVector.x);
-        moveVector.y = Input.GetAxisRaw("Vertical");
-        anim.SetFloat("Vertical", moveVector.y);
-        anim.SetFloat("Speed", moveVector.sqrMagnitude);
+
+        if (scin == 0)
+        {
+            moveVector.x = Input.GetAxisRaw("Horizontal");
+            anim.SetFloat("Horizontal", moveVector.x);
+            moveVector.y = Input.GetAxisRaw("Vertical");
+            anim.SetFloat("Vertical", moveVector.y);
+            anim.SetFloat("Speed", moveVector.sqrMagnitude);
+        }
+        if (scin == 1)
+        {
+
+        }
+        if (scin == 2)
+        {
+          
+        }
+        if (scin == 3)
+        {
+
+        }
 
     }
 
@@ -76,6 +96,10 @@ public class Movement : MonoBehaviour
         {
             isLight = true;
             lightPrefab = collision.name;
+        }
+        else
+        {
+            isLight = false;    
         }
         if (collision.gameObject.tag == "Finish")
         {

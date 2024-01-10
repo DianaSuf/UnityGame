@@ -23,5 +23,13 @@ public class Enemy : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.fixedDeltaTime);
+        if (PauseMenu.GameIsPause || TimeCounter.menuStars) 
+        {
+            speed = 0;
+        }
+        else
+        {
+            speed = 1f;
+        }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopControl : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class ShopControl : MonoBehaviour
     public GameObject block;
     public TextMeshProUGUI priceText;
     public GameObject union;
+    public Button buy;
+    public Button takeOff;
 
     public void Awake()
     {
@@ -26,6 +29,8 @@ public class ShopControl : MonoBehaviour
             block.SetActive(false);
             priceText.gameObject.SetActive(false);
             union.SetActive(false);
+            buy.gameObject.SetActive(false);
+            takeOff.gameObject.SetActive(true);
         }
     }
 
