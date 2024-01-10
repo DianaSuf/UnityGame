@@ -31,5 +31,9 @@ public class Enemy : MonoBehaviour
         {
             speed = 1f;
         }
+        //if (Bullet.isDead)
+        //{
+        //    Destroy(transform);
+        //}
     }
 }

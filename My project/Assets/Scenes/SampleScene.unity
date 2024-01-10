@@ -4958,7 +4958,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: c247e266e1f947d4a912315eb3235e06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e947749b2cfe124459b3f3c07eee23ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4979,7 +4979,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.9, y: 0.18, z: 0}
-  m_LocalScale: {x: 1.4105849, y: 1.4105849, z: 1.4105849}
+  m_LocalScale: {x: 0.71783376, y: 0.71783376, z: 0.71783376}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -8474,6 +8474,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ae61f4e66e91604b938dcbe423bfd88, type: 3}
+--- !u!1 &1424404468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1424404469}
+  m_Layer: 0
+  m_Name: SpawnSnow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1424404469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424404468}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.277, y: -0.456, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2056154342}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1433360461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13207,6 +13238,7 @@ GameObject:
   - component: {fileID: 2056154343}
   - component: {fileID: 2056154345}
   - component: {fileID: 2056154346}
+  - component: {fileID: 2056154347}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -13278,7 +13310,8 @@ Transform:
   m_LocalPosition: {x: -3.31, y: -2.27, z: 0}
   m_LocalScale: {x: 0.77349776, y: 0.722491, z: 1.8562865}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1424404469}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2056154343
@@ -13392,6 +13425,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2056154347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056154338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96084cfa47c1ca543b9eeb31ad4220d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowShoot: {fileID: 9047390439471906084, guid: e0fad3434e889da49b060a99cab99cfb, type: 3}
+  SpawnSnow: {fileID: 1424404469}
+  startTimeBtwShots: 0.5
 --- !u!1001 &2059462969
 PrefabInstance:
   m_ObjectHideFlags: 0
