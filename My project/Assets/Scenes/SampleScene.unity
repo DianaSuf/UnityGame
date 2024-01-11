@@ -2849,8 +2849,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scin: 0
-  pers1: {fileID: 2056154338}
-  pers2: {fileID: 1110742556}
+  pers0: {fileID: 2056154338}
+  pers1: {fileID: 1110742556}
+  pers2: {fileID: 902285978}
+  pers3: {fileID: 1062767306}
 --- !u!1001 &521817428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5487,7 +5489,7 @@ MonoBehaviour:
   scoreAll: {fileID: 941952332}
   Count: 9
   anim: {fileID: 0}
-  scin: 0
+  soundGift: {fileID: 8395175097576611876, guid: 26a62cb545de7b949a563a45290e8695, type: 3}
 --- !u!50 &902285983
 Rigidbody2D:
   serializedVersion: 4
@@ -6244,6 +6246,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5917202744004113354, guid: 4ae61f4e66e91604b938dcbe423bfd88, type: 3}
   m_PrefabInstance: {fileID: 1532938516}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1011175267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1011175268}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1011175268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011175267}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.98866546, y: 0.029928505, z: 0.04336357}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1012098065 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5917202744004113354, guid: 4ae61f4e66e91604b938dcbe423bfd88, type: 3}
@@ -6973,7 +7006,7 @@ MonoBehaviour:
   scoreAll: {fileID: 941952332}
   Count: 9
   anim: {fileID: 0}
-  scin: 0
+  soundGift: {fileID: 8395175097576611876, guid: 26a62cb545de7b949a563a45290e8695, type: 3}
 --- !u!50 &1062767311
 Rigidbody2D:
   serializedVersion: 4
@@ -7447,7 +7480,7 @@ MonoBehaviour:
   scoreAll: {fileID: 941952332}
   Count: 9
   anim: {fileID: 0}
-  scin: 0
+  soundGift: {fileID: 8395175097576611876, guid: 26a62cb545de7b949a563a45290e8695, type: 3}
 --- !u!50 &1110742561
 Rigidbody2D:
   serializedVersion: 4
@@ -14340,7 +14373,7 @@ MonoBehaviour:
   scoreAll: {fileID: 941952332}
   Count: 9
   anim: {fileID: 0}
-  scin: 0
+  soundGift: {fileID: 8395175097576611876, guid: 26a62cb545de7b949a563a45290e8695, type: 3}
 --- !u!50 &2056154344
 Rigidbody2D:
   serializedVersion: 4
@@ -16077,3 +16110,4 @@ SceneRoots:
   - {fileID: 1092322645}
   - {fileID: 1498291829}
   - {fileID: 2064502250}
+  - {fileID: 1011175268}
