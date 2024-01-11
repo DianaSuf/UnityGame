@@ -11,11 +11,6 @@ public class VolumeCheck : MonoBehaviour
     public Toggle toggle;
     private float _volumeValue;
 
-    //void Update()
-    //{
-    //    ValueMusic();
-    //}
-
     public void ValueMusic()
     {
         if (toggle.isOn)
