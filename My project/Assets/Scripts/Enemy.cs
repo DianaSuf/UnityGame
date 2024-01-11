@@ -30,9 +30,9 @@ public class Enemy : MonoBehaviour
         {
             speed = 1f;
         }
-        if (Bullet.isDead)
-        {
-            Destroy(gameObject);
-        }
+        //if (Bullet.isDead)
+        //{
+           // Destroy(gameObject);
+       //}
     }
 }
