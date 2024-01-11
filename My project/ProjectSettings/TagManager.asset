@@ -10,6 +10,8 @@ TagManager:
   - Light
   - Ice
   - Enemy
+  - Sound
+  - Slider
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Solid
   - 
   - 
   - 

@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
     public static bool isEnemy = false;
     public static string lightPrefab;
     public Animator anim;
-    public int scin;
+    public GameObject soundGift;
 
     void Start()
     {
@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
         scoreText.text = string.Format("{0} / {1}", 0, MaxCount);
         isFinish = false;
         isEnemy = false;
-        scin = PlayerPrefs.GetInt("scin");
+        
     }
 
 
@@ -41,26 +41,11 @@ public class Movement : MonoBehaviour
             speed = 2f;
         else speed = 6f;
 
-        if (scin == 0)
-        {
-            moveVector.x = Input.GetAxisRaw("Horizontal");
-            anim.SetFloat("Horizontal", moveVector.x);
-            moveVector.y = Input.GetAxisRaw("Vertical");
-            anim.SetFloat("Vertical", moveVector.y);
-            anim.SetFloat("Speed", moveVector.sqrMagnitude);
-        }
-        if (scin == 1)
-        {
-
-        }
-        if (scin == 2)
-        {
-          
-        }
-        if (scin == 3)
-        {
-
-        }
+        moveVector.x = Input.GetAxisRaw("Horizontal");
+        anim.SetFloat("Horizontal", moveVector.x);
+        moveVector.y = Input.GetAxisRaw("Vertical");
+        anim.SetFloat("Vertical", moveVector.y);
+        anim.SetFloat("Speed", moveVector.sqrMagnitude);
 
     }
 
@@ -81,6 +66,7 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "CollectiveSquare")
         {
+            Instantiate(soundGift, transform.position, Quaternion.identity);
             if (TimeCounter.TimeRemaining > 0)
             {
                 score++;
@@ -96,11 +82,12 @@ public class Movement : MonoBehaviour
         {
             isLight = true;
             lightPrefab = collision.name;
+            Debug.Log("в света");
         }
-        else
-        {
-            isLight = false;    
-        }
+        //else
+        //{
+        //    isLight = false;    
+        //}
         if (collision.gameObject.tag == "Finish")
         {
             isFinish = true;
@@ -124,6 +111,11 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.tag == "Ice")
         {
             trigIce = false;
+        }
+        if (collision.gameObject.tag == "Light")
+        {
+            isLight = false;
+            Debug.Log("вышел из света");
         }
     }
 }
