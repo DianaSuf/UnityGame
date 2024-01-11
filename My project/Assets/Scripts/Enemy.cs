@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public static bool isDead;
     float speed = 1f;
     Transform target;
     void Start()
@@ -41,6 +42,7 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("its enemy!");
             Destroy(gameObject);
+            isDead = true;
         }
     }
 }

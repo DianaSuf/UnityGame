@@ -12711,7 +12711,6 @@ RectTransform:
   - {fileID: 554100646}
   - {fileID: 920765134}
   - {fileID: 1206248961}
-  - {fileID: 1912027686}
   - {fileID: 1922274851}
   - {fileID: 458935537}
   - {fileID: 600026974}
@@ -13336,14 +13335,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1912027686}
   - component: {fileID: 1912027688}
-  - component: {fileID: 1912027687}
   m_Layer: 0
   m_Name: iconSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1912027686
 Transform:
   m_ObjectHideFlags: 0
@@ -13353,25 +13351,12 @@ Transform:
   m_GameObject: {fileID: 1912027685}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 671, y: 446, z: -19361.25}
+  m_LocalPosition: {x: 671, y: 445.99997, z: -19361.25}
   m_LocalScale: {x: 129.07501, y: 129.07501, z: 215.125}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1815114139}
+  m_Father: {fileID: 2143469419}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1912027687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912027685}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 943a6dc9438c4514a9706bfbec4831f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 1912027685}
 --- !u!212 &1912027688
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13412,7 +13397,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: -1478221866, guid: e894d3ddfea9f73409f74aa7ad645775, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14438,6 +14423,7 @@ MonoBehaviour:
   pointTwo: {fileID: 843734540}
   pointTree: {fileID: 1203237416}
   pointFour: {fileID: 1949417807}
+  icon: {fileID: 1912027685}
 --- !u!4 &2047254640 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5917202744004113354, guid: 4ae61f4e66e91604b938dcbe423bfd88, type: 3}
@@ -15759,6 +15745,7 @@ RectTransform:
   - {fileID: 345342285}
   - {fileID: 2103607375}
   - {fileID: 453675917}
+  - {fileID: 1912027686}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

@@ -11,17 +11,14 @@ public class SpawnInhabitant : MonoBehaviour
     public GameObject pointTwo;
     public GameObject pointTree;
     public GameObject pointFour;
-    public static int countSpawn;
-    public static bool isSpawn;
+    private int countSpawn;
+    public GameObject icon;
     private Dictionary<string, bool> spawnLight = new Dictionary<string, bool>()
     {
         {"Light", true},
         {"Light1", true}
     };
-    void Start()
-    {
-        countSpawn = 0;
-    }
+
     void Update()
     {
         if (TimeCounter.TimeRemaining > 0 && !Movement.isFinish && !Movement.isEnemy)
@@ -63,13 +60,19 @@ public class SpawnInhabitant : MonoBehaviour
                 spawnLight[Movement.lightPrefab] = false;
             }
         }
+        if (Enemy.isDead)
+        {
+            countSpawn--;
+            Enemy.isDead = false;   
+        }
+
         if (countSpawn > 0)
         {
-            isSpawn = true;
+            icon.SetActive(true);
         }
-        else
+        if (countSpawn < 0)
         {
-            isSpawn = false;
+            icon.SetActive(false);
         }
     }
 }
