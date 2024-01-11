@@ -11,6 +11,7 @@ public class SpawnInhabitant : MonoBehaviour
     public GameObject pointTwo;
     public GameObject pointTree;
     public GameObject pointFour;
+    public GameObject pointFive;
     private int countSpawn;
     public GameObject icon;
     private Dictionary<string, bool> spawnLight = new Dictionary<string, bool>()
@@ -55,6 +56,16 @@ public class SpawnInhabitant : MonoBehaviour
                 else if (Movement.lightPrefab == "Light1")
                 {
                     Instantiate(spawnInhabitant, pointTree.transform.position, Quaternion.identity);
+                    countSpawn++;
+                }
+                else if (Movement.lightPrefab == "Light2")
+                {
+                    Instantiate(spawnInhabitant, pointFive.transform.position, Quaternion.identity);
+                    countSpawn++;
+                }
+                else if (Movement.lightPrefab == "Light3")
+                {
+                    Instantiate(spawnInhabitant, pointFive.transform.position, Quaternion.identity);
                     countSpawn++;
                 }
                 spawnLight[Movement.lightPrefab] = false;
