@@ -32,7 +32,15 @@ public class Enemy : MonoBehaviour
         }
         //if (Bullet.isDead)
         //{
-           // Destroy(gameObject);
-       //}
+        //    Destroy(gameObject);
+        //}
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            Debug.Log("its enemy!");
+            Destroy(gameObject);
+        }
     }
 }

@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
     //public float liveTime;
     public float distance;
     public LayerMask whatIsSolid;
-    public static bool isDead = false;
+    //public static bool isDead = false;
 
     private Vector2 target;
 
@@ -24,11 +24,11 @@ public class Bullet : MonoBehaviour
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
         if (hitInfo.collider != null)
         {
-            if (hitInfo.collider.CompareTag("Enemy"))
-            {
-                isDead = true;
-                Debug.Log("fdf");
-            }
+            //if (hitInfo.collider.CompareTag("Enemy"))
+            //{
+            //    isDead = true;
+            //    Debug.Log("fdf");
+            //}
             Destroy(gameObject);
         }
 
