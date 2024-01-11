@@ -10,7 +10,7 @@ public class VolumeInit : MonoBehaviour
 
     void Start()
     {
-        var volumeValue = PlayerPrefs.GetFloat(volumeParameter, volumeParameter == "BGVol" ? 0f : -80f);
+        var volumeValue = PlayerPrefs.GetFloat(volumeParameter, 0.0f);
         mixer.SetFloat(volumeParameter, volumeValue);
     }
 

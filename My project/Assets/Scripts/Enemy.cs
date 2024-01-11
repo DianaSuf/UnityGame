@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public static bool isDead;
     float speed = 1f;
     Transform target;
     void Start()
@@ -30,9 +31,18 @@ public class Enemy : MonoBehaviour
         {
             speed = 1f;
         }
-        if (Bullet.isDead)
+        //if (Bullet.isDead)
+        //{
+        //    Destroy(gameObject);
+        //}
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
         {
+            Debug.Log("its enemy!");
             Destroy(gameObject);
+            isDead = true;
         }
     }
 }

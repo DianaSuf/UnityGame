@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406ba4c4aa58b9145b06a86c089dac62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 0
+  sceneNumber: 6
 --- !u!114 &788348489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1135,7 +1135,6 @@ MonoBehaviour:
   stars1: {fileID: 644425878}
   stars2: {fileID: 527723042}
   stars3: {fileID: 46770574}
-  button: {fileID: 788348489}
 --- !u!114 &788348493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1740,7 +1739,6 @@ MonoBehaviour:
   stars1: {fileID: 715386579}
   stars2: {fileID: 2014544713}
   stars3: {fileID: 926756173}
-  button: {fileID: 1431867879}
 --- !u!1 &1484751692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,7 +1881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406ba4c4aa58b9145b06a86c089dac62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 0
+  sceneNumber: 5
 --- !u!114 &1517019206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1996,7 +1994,6 @@ MonoBehaviour:
   stars1: {fileID: 1484751692}
   stars2: {fileID: 1684455576}
   stars3: {fileID: 732727738}
-  button: {fileID: 1517019206}
 --- !u!114 &1517019210
 MonoBehaviour:
   m_ObjectHideFlags: 0

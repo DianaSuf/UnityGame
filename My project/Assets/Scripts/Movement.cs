@@ -19,7 +19,12 @@ public class Movement : MonoBehaviour
     public static bool isEnemy = false;
     public static string lightPrefab;
     public Animator anim;
-    public GameObject soundGift;
+    AudioManager audioManager;
+
+    public void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     void Start()
     {
@@ -31,7 +36,6 @@ public class Movement : MonoBehaviour
         isEnemy = false;
         
     }
-
 
     void Update()
     {
@@ -66,7 +70,7 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag == "CollectiveSquare")
         {
-            Instantiate(soundGift, transform.position, Quaternion.identity);
+            audioManager.PlaySFX(audioManager.presents);
             if (TimeCounter.TimeRemaining > 0)
             {
                 score++;

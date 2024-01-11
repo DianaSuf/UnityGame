@@ -12,6 +12,8 @@ TagManager:
   - Enemy
   - Sound
   - Slider
+  - Bullet
+  - Audio
   layers:
   - Default
   - TransparentFX
