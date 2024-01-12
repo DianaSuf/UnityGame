@@ -14,7 +14,7 @@ public class Progress : MonoBehaviour
 
     void Update()
     {
-        MaxCount = Movement.MaxCount;//+1 за выход из лабиринта--надо будет дописать!!!
+        MaxCount = Movement.MaxCount + 1;//+1 за выход из лабиринта--надо будет дописать!!!
         if (TimeCounter.TimeRemaining > 0)
             GetProgress();
     }

@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            speed = 1f;
+            speed = 2f;
         }
         //if (Bullet.isDead)
         //{

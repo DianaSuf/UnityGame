@@ -6098,7 +6098,7 @@ MonoBehaviour:
   speed: 6
   scoreText: {fileID: 1033396938}
   scoreAll: {fileID: 941952332}
-  Count: 9
+  Count: 12
   anim: {fileID: 0}
 --- !u!50 &902285983
 Rigidbody2D:
@@ -6270,13 +6270,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c0e368331c43cd4689781eaf816fdfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxTime: 50
+  MaxTime: 100
   time: {fileID: 554100647}
   Stars3: {fileID: 1922274850}
   Stars2: {fileID: 458935536}
   Stars1: {fileID: 600026973}
   Stars0: {fileID: 1037742990}
   scoreText: {fileID: 1033396938}
+  levelName: level2
+  colGift1: 4
+  colGift2: 8
+  colGift3: 12
 --- !u!4 &934306181 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5917202744004113354, guid: 4ae61f4e66e91604b938dcbe423bfd88, type: 3}
@@ -6394,8 +6398,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -214, y: -133}
-  m_SizeDelta: {x: 103.73, y: 99.1}
+  m_AnchoredPosition: {x: -194, y: -133}
+  m_SizeDelta: {x: 143.8, y: 99.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &941952331
 SpriteRenderer:
@@ -6534,7 +6538,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 11.210224, y: -11.294403, z: 0, w: 0}
+  m_margin: {x: 11.210224, y: -11.294403, z: -8.706326, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7162,7 +7166,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 11.210224, y: -11.294403, z: 0, w: 0}
+  m_margin: {x: 11.210224, y: -11.294403, z: -63.421947, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7636,7 +7640,7 @@ MonoBehaviour:
   speed: 6
   scoreText: {fileID: 1033396938}
   scoreAll: {fileID: 941952332}
-  Count: 9
+  Count: 12
   anim: {fileID: 0}
 --- !u!50 &1062767311
 Rigidbody2D:
@@ -8186,7 +8190,7 @@ MonoBehaviour:
   speed: 6
   scoreText: {fileID: 1033396938}
   scoreAll: {fileID: 941952332}
-  Count: 9
+  Count: 12
   anim: {fileID: 0}
 --- !u!50 &1110742561
 Rigidbody2D:
@@ -9669,7 +9673,7 @@ Transform:
   m_GameObject: {fileID: 1203237416}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.4, y: 3.59, z: -1705.527}
+  m_LocalPosition: {x: 14.8, y: 2.9, z: -1705.527}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10676,7 +10680,7 @@ Transform:
   m_GameObject: {fileID: 1301429311}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.16, y: -1.17, z: -1705.527}
+  m_LocalPosition: {x: 33.4, y: 1, z: -1705.527}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15962,7 +15966,7 @@ Transform:
   m_GameObject: {fileID: 1949417807}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.56, y: -8.47, z: -1705.527}
+  m_LocalPosition: {x: 23, y: -8.5, z: -1705.527}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16577,7 +16581,7 @@ Transform:
   m_GameObject: {fileID: 2035335948}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.94, y: 2.85, z: -1705.527}
+  m_LocalPosition: {x: 7, y: 0.5, z: -1705.527}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16754,7 +16758,7 @@ MonoBehaviour:
   speed: 6
   scoreText: {fileID: 1033396938}
   scoreAll: {fileID: 941952332}
-  Count: 9
+  Count: 12
   anim: {fileID: 0}
 --- !u!50 &2056154344
 Rigidbody2D:
