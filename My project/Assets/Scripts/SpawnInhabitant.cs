@@ -46,6 +46,11 @@ public class SpawnInhabitant : MonoBehaviour
                 Instantiate(spawnInhabitant, pointFour.transform.position, Quaternion.identity);
                 countSpawn++;
             }
+            if (Noise.MaxScaleNoise && Movement.score <= Movement.MaxCount && Movement.score > ((Movement.MaxCount / 4) * 3.5))
+            {
+                Instantiate(spawnInhabitant, pointFive.transform.position, Quaternion.identity);
+                countSpawn++;
+            }
             if (Movement.isLight && spawnLight.ContainsKey(Movement.lightPrefab) && spawnLight[Movement.lightPrefab])
             {
                 if (Movement.lightPrefab == "Light")
