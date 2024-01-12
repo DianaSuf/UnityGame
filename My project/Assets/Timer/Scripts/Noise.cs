@@ -8,6 +8,7 @@ public class Noise : MonoBehaviour
 {
     public Image NoiseScale;
     public static bool MaxScaleNoise;
+    public GameObject Enemy;
 
     void Start()
     {
@@ -16,6 +17,7 @@ public class Noise : MonoBehaviour
 
     void Update()
     {
+        //CheckSilence();
         if (TimeCounter.TimeRemaining > 0 && Progress.MaxCount != Progress.RealCount)
         {
             if (!Input.GetKey(KeyCode.LeftShift) && (Input.GetKey(KeyCode.W) 
@@ -56,4 +58,11 @@ public class Noise : MonoBehaviour
         NoiseScale.fillAmount = Mathf.Lerp(NoiseScale.fillAmount, NoiseScale.fillAmount - 0.1f, Time.deltaTime);
     }
 
+    //private void CheckSilence()
+    //{
+    //    if (Enemy.activeInHierarchy)
+    //    {
+    //        Debug.Log("22");
+    //    }
+    //}
 }
